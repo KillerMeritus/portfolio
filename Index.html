@@ -7,15 +7,16 @@
     <title>Vivek Sarathe's Portfolio</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- ✨ Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <style>
         * {
             margin: 0;
             padding: 0;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         html {
@@ -74,6 +75,33 @@
             width: 100%;
         }
 
+        .headshot {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .avatar-ring {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .headshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+
+        }
+
         .Hero {
             background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
             color: #f8fafc;
@@ -130,14 +158,16 @@
 
         section {
             padding: 4rem 2rem;
-            max-width: 1000px;
-            margin: auto;
+            /* max-width: 1000px; */
+            /* margin: auto; */
         }
 
         .about,
         .projects,
         .contact {
             text-align: center;
+            max-width: 1000px;
+            margin: auto;
         }
 
         h2 {
@@ -158,28 +188,78 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
             margin-top: 2rem;
         }
 
+        
         .project-card {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+            color:#facc15;
+            padding: 2rem;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
         }
-
+        
+        Pro
+        
         .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(31, 58, 138, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(31, 58, 138, 0.25);
+        }
+        
+        .project-card h3 {
+            /* color: #facc15;
+             */
+             color:white;
+            margin-bottom: 0.6rem;
+            font-size: 1.3rem;
+        }
+        
+        .project-card p {
+            color: #F9FAFB;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .Images {
+            display: block;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        
+        .btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            
         }
 
-        .project-card h3 {
-            color: #1e3a8a;
-            margin-bottom: 0.5rem;
+        .project-btn{
+           background-color: #facc15;
+            color: black;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
         }
+
 
         /* ✨ Contact section styles */
         .contact-icons {
@@ -225,6 +305,10 @@
                 flex-direction: column;
                 gap: 1rem;
             }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -241,48 +325,91 @@
     </header>
 
     <section id="hero" class="Hero">
+        <div class="avatar-ring">
+            <div class="headshot">
+                <img src="Images/profile_picture.png" alt="profile_picture">
+            </div>
+        </div>
         <h1>Hi, I'm Vivek 👋</h1>
-        <p>LowCode Automation Developer | AI Agents Enthusiast</p>
+        <p>AI Agents & AI for Robotics-Oriented Developer | Building Intelligent Systems</p>
         <a href="#projects" class="btn">View My Work</a>
     </section>
 
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>I'm Vivek — a college student and founder-in-progress passionate about building scalable AI automations that
-            turn repetitive work into seamless systems using AI agents, n8n, and custom-coded solutions. I've built
-            projects automating sales and marketing workflows, creating personalized outreach systems, and developing AI
-            chatbots for client and team support.</p>
+        <p>
+            I'm Vivek, a college student focused on building intelligent systems that interact with the real world.
+            My interests lie in AI, automation, and the foundations of robotics — perception, logic, and control.
+            I enjoy breaking down complex problems, understanding why systems fail, and designing solutions that scale
+            from simple prototypes to real-world applications.
+        </p>
         <div class="skills">
-            <p>HTML • CSS • JavaScript • Python • Java</p>
+            <p>Python • Java • HTML • CSS • JavaScript • Git</p>
         </div>
     </section>
 
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="projects-grid">
+
             <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>A simple responsive portfolio using HTML and CSS.</p>
+                <h3>Weird Analog Watch</h3>
+                    <img class="Images" src="Images/AnalogWatch.png" alt="Clickable Image">
+                <p>A watch with 24 hours timeline</p>
+                <div class="btns">
+                    <a class="project-btn" href="https://github.com/KillerMeritus/Analog-Watch" alt="github btn">Code</a>
+                    <a class="project-btn" href="https://analog-watch-seven.vercel.app" alt="github">Demo</a>
+                </div>
             </div>
+
             <div class="project-card">
-                <h3>SEO Blog Automation</h3>
-                <p>A N8N automation that does every work that SEO agencies do.</p>
+                <h3>Tic Tac Toe</h3>
+                    <img class="Images" src="Images/TicTacToe.png" alt="Clickable Image">
+                <p>A watch with 24 hours timeline</p>
+                <div class="btns">
+                    <a class="project-btn" href="https://github.com/KillerMeritus/Tic-Tac-Toe" alt="github btn">Code</a>
+                    <a class="project-btn" href="https://tic-tac-toe-vert-seven.vercel.app/" alt="github">Demo</a>
+                </div>
             </div>
+
+            <div class="project-card">
+                <h3>Calculator</h3>
+                    <img class="Images" src="Images/Calculator.png" alt="Clickable Image">
+                <p>A watch with 24 hours timeline</p>
+                <div class="btns">
+                    <a class="project-btn" href="https://github.com/KillerMeritus/Calculator" alt="github btn">Code</a>
+                    <a class="project-btn" href="https://killermeritus.github.io/Calculator/" alt="github">Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Calculator</h3>
+                    <img class="Images" src="Images/Timer.png" alt="Clickable Image">
+                <p>A watch with 24 hours timeline</p>
+                <div class="btns">
+                    <a class="project-btn" href="https://github.com/KillerMeritus/Timer" alt="github btn">Code</a>
+                    <a class="project-btn" href="https://killermeritus.github.io/Timer/" alt="github">Demo</a>
+                </div>
+            </div>
+
+            
+
         </div>
     </section>
 
-    <!-- ✨ Contact Section with Icons -->
+    <!-- Contact Section with Icons -->
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <div class="contact-icons">
             <a href="mailto:Senv9098@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/viveksarathe" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://linkedin.com/in/viveksarathe" target="_blank" title="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
             <a href="https://github.com/KillerMeritus" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </section>
 
     <footer class="footer">
-        <p>© 2025 Vivek Sarathe | All Rights Reserved</p>
+        <p>© 2025 Vivek Sarathe • Built with curiosity and consistency</p>
     </footer>
 </body>
 
